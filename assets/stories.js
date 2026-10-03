@@ -122,6 +122,7 @@
 
     if (!data.stories.length) {
       root.querySelector('.toolbar').hidden = true;
+      var cta = root.querySelector('#bottom-cta'); if (cta) cta.hidden = true;
       listEl.outerHTML =
         '<div class="empty">' +
           '<p class="big">The first stories are being read with care.</p>' +
