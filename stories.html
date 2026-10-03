@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story Library · I Am Jane Doe</title>
+  <meta name="description" content="Read stories shared anonymously by women. Search by keyword or topic. You are not alone.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239e5a67'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='sans-serif' font-weight='600' font-size='28' fill='%23fff'%3EJD%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/stories.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">I Am Jane Doe</a>
+      <nav aria-label="Main">
+        <a href="stories.html" aria-current="page">Read stories</a>
+        <a href="index.html#share">Share your story</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="library">
+    <section class="lib-head">
+      <div class="wrap narrow">
+        <h1 class="h2" style="font-size: clamp(36px, 8vw, 56px); line-height: 1.07;">Story library</h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="lead">Stories from women who chose to share, so you know you are believed and you are not the only one.</p>
+        <p>Every story was shared anonymously and with permission. A person read each one and removed names and identifying details before it was published.</p>
+        <p class="care">Some stories describe abuse and violence. Read at your own pace, and step away whenever you need to. If you need to talk to someone now, call the RAINN hotline at <a href="tel:18006564673">800-656-4673</a> or the Domestic Violence Hotline at <a href="tel:18007997233">800-799-7233</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 48px;">
+      <div class="wrap narrow" style="gap: 32px;">
+        <div class="toolbar">
+          <form id="search-form" role="search" class="search">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="5.25"/><path d="M11 11l3.5 3.5" stroke-linecap="round"/></svg>
+            <label for="story-search" class="sr-only">Search stories</label>
+            <input id="story-search" type="search" placeholder="Search stories by word" autocomplete="off">
+          </form>
+          <div class="chips" id="topic-chips" role="group" aria-label="Filter by topic"></div>
+          <div class="result-line">
+            <span id="result-count" aria-live="polite">Loading stories…</span>
+            <button type="button" class="linkish" id="clear-filters" hidden>Clear search</button>
+          </div>
+        </div>
+
+        <ul class="story-list" id="story-list"></ul>
+
+        <div class="empty" style="border-style: solid; border-color: var(--gray-light);">
+          <p class="big">Do you have a story to tell?</p>
+          <p>You can share it anonymously, and you decide whether it’s published.</p>
+          <a class="btn" href="index.html#share">Share your story</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="stack-12">
+        <p style="font-size: 21px; font-weight: 600; line-height: 1.19; letter-spacing: -0.28px;">If you’re in danger or need to talk to someone now</p>
+        <div class="helplines">
+          <span>RAINN National Sexual Assault Hotline: <a href="tel:18006564673">800-656-4673</a> · <a href="https://www.rainn.org" target="_blank" rel="noopener">rainn.org</a></span>
+          <span>National Domestic Violence Hotline: <a href="tel:18007997233">800-799-7233</a> · <a href="https://www.thehotline.org" target="_blank" rel="noopener">thehotline.org</a></span>
+          <span>Emergency: <a href="tel:911">911</a></span>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span style="font-weight: 600;">iamjanedoestories.org</span>
+        <div class="links">
+          <a href="index.html#share">Share your story</a>
+          <a href="mailto:iamjanedoestories@gmail.com">iamjanedoestories@gmail.com</a>
+          <a href="index.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
