@@ -7,16 +7,23 @@
   <meta name="description" content="Read stories shared anonymously by women. Search by keyword or topic. You are not alone.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239e5a67'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='sans-serif' font-weight='600' font-size='28' fill='%23fff'%3EJD%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/exit.js" defer></script>
   <script src="assets/stories.js" defer></script>
 </head>
 <body>
+
+  <a class="quick-exit" id="quick-exit" href="https://weather.com" rel="noreferrer">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    Leave this site
+  </a>
 
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">I Am Jane Doe</a>
       <nav aria-label="Main">
         <a href="stories.html" aria-current="page">Read stories</a>
-        <a href="index.html#share">Share your story</a>
+        <a href="index.html#share">Share</a>
+        <a href="help.html">Get help</a>
       </nav>
     </div>
   </header>
@@ -28,7 +35,7 @@
         <span class="rule" aria-hidden="true"></span>
         <p class="lead">Stories from women who chose to share, so you know you are believed and you are not the only one.</p>
         <p>Every story was shared anonymously and with permission. A person read each one and removed names and identifying details before it was published.</p>
-        <p class="care">Some stories describe abuse and violence. Read at your own pace, and step away whenever you need to. If you need to talk to someone now, call the RAINN hotline at <a href="tel:18006564673">800-656-4673</a> or the Domestic Violence Hotline at <a href="tel:18007997233">800-799-7233</a>.</p>
+        <p class="care">Some stories describe abuse and violence. Read at your own pace, and step away whenever you need to. If you need to talk to someone now, call the RAINN hotline at <a href="tel:18006564673">800-656-4673</a>, or text HOME to <a href="sms:741741">741741</a>. <a href="help.html">More ways to get help</a></p>
       </div>
     </section>
 
@@ -63,15 +70,18 @@
       <div class="stack-12">
         <p style="font-size: 21px; font-weight: 600; line-height: 1.19; letter-spacing: -0.28px;">If you’re in danger or need to talk to someone now</p>
         <div class="helplines">
-          <span>RAINN National Sexual Assault Hotline: <a href="tel:18006564673">800-656-4673</a> · <a href="https://www.rainn.org" target="_blank" rel="noopener">rainn.org</a></span>
-          <span>National Domestic Violence Hotline: <a href="tel:18007997233">800-799-7233</a> · <a href="https://www.thehotline.org" target="_blank" rel="noopener">thehotline.org</a></span>
           <span>Emergency: <a href="tel:911">911</a></span>
+          <span>RAINN Sexual Assault Hotline: <a href="tel:18006564673">800-656-4673</a> · <a href="https://rainn.org/help-and-healing/hotline/" target="_blank" rel="noopener">chat online</a></span>
+          <span>Domestic Violence Hotline: <a href="tel:18007997233">800-799-7233</a> · text START to <a href="sms:88788">88788</a></span>
+          <span>Crisis Text Line: text HOME to <a href="sms:741741">741741</a></span>
+          <span><a href="help.html">More ways to get help →</a></span>
         </div>
       </div>
       <div class="foot-row">
         <span style="font-weight: 600;">iamjanedoestories.org</span>
         <div class="links">
           <a href="index.html#share">Share your story</a>
+          <a href="help.html">Get help</a>
           <a href="mailto:iamjanedoestories@gmail.com">iamjanedoestories@gmail.com</a>
           <a href="index.html#privacy">Privacy</a>
         </div>

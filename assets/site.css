@@ -173,3 +173,32 @@ mark { background: var(--rose-select); color: inherit; border-radius: 3px; paddi
   .btn, .chip, .check-chip span { transition: none; }
 }
 a[href^="tel:"] { white-space: nowrap; }
+
+/* ---------- Quick exit ---------- */
+.quick-exit {
+  position: fixed; right: 16px; bottom: 16px; z-index: 50;
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px;
+  border-radius: var(--radius-pill); background: var(--ink); color: var(--white);
+  font-size: 14px; font-weight: 600; letter-spacing: -0.224px; text-decoration: none;
+  box-shadow: 0 0 0 3px var(--white);
+}
+.quick-exit:hover { color: var(--white); text-decoration: none; background: #000; }
+.quick-exit svg { width: 14px; height: 14px; }
+.site-footer { padding-bottom: 96px; }
+
+/* ---------- Who reads ---------- */
+.who-card { padding: clamp(28px, 6vw, 48px); border-radius: var(--radius-card); background: var(--rose-wash); border: 1px solid var(--rose-soft); }
+
+/* ---------- Writing prompts ---------- */
+.prompts { padding: 20px 24px; border-radius: var(--radius-card); border: 1px solid var(--gray-light); display: flex; flex-direction: column; gap: 6px; }
+.prompts ul { margin: 6px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+.approve { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+.approve input { width: 22px; height: 22px; margin: 1px 0 0; flex: none; accent-color: var(--rose); }
+.approve input:disabled + span { opacity: 0.75; }
+.approve .caption { display: block; }
+
+/* ---------- Help page ---------- */
+.help-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+.help-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.help-actions .btn { font-size: 16px; padding: 12px 22px; }
+.steps-1col { grid-template-columns: 1fr; }

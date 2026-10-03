@@ -4,6 +4,9 @@
    - The email subject tells you her choice:
      - **"New story: OK to share in the library"**: she said yes to publishing.
      - **"New story: keep private"**: never publish it.
+     - **"New story: OK to share (send her the edit to approve first)"**: she left her email and wants
+       to see the edited version first. Email it to her and wait for her OK before publishing.
+   - The site promises women that stories are read **within a week**.
 2. A person reads it and removes anything that could identify her or anyone else
    (full names, towns, schools, workplaces, dates, and so on).
 3. The story is added to `stories.json` (the easiest way: forward the email to Claude and ask

@@ -7,17 +7,24 @@
   <meta name="description" content="A safe place for women to share their stories anonymously, and a library of stories so no woman feels alone.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239e5a67'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='sans-serif' font-weight='600' font-size='28' fill='%23fff'%3EJD%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/exit.js" defer></script>
   <script src="assets/stories.js" defer></script>
   <script src="assets/form.js" defer></script>
 </head>
 <body>
+
+  <a class="quick-exit" id="quick-exit" href="https://weather.com" rel="noreferrer">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    Leave this site
+  </a>
 
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">I Am Jane Doe</a>
       <nav aria-label="Main">
         <a href="stories.html">Read stories</a>
-        <a href="#share">Share your story</a>
+        <a href="#share">Share</a>
+        <a href="help.html">Get help</a>
       </nav>
     </div>
   </header>
@@ -32,6 +39,7 @@
           <a class="btn" href="#share">Share your story</a>
           <a class="btn secondary" href="stories.html">Read stories</a>
         </div>
+        <p class="caption" style="margin-top: 8px;">Need to leave fast? Use the <strong>Leave this site</strong> button or press Esc twice. <a href="help.html#online-safety">Staying safe online</a></p>
       </div>
     </section>
 
@@ -50,24 +58,33 @@
           <li>
             <span class="num">1</span>
             <span class="title">Write your story.</span>
-            <span>Type it here or upload a file. Share as much or as little as you want. Leaving your email is optional.</span>
+            <span>A few sentences or a few pages. Type it here or upload a file. Leaving your email is optional.</span>
           </li>
           <li>
             <span class="num">2</span>
             <span class="title">Choose what happens to it.</span>
-            <span>Let us share it anonymously in the library, or keep it private so only our team reads it.</span>
+            <span>Let us share it anonymously in the library, or keep it private so only we read it.</span>
           </li>
           <li>
             <span class="num">3</span>
-            <span class="title">We read every story with care.</span>
-            <span>A person reads each story and removes names and details that could identify you or anyone else.</span>
+            <span class="title">We read it with care.</span>
+            <span>Within a week, we read your story and remove names and details that could identify you or anyone else.</span>
           </li>
           <li>
             <span class="num">4</span>
-            <span class="title">It joins the story library.</span>
-            <span>If you said yes, your story is published under your alias or “Jane Doe,” where other women can find it.</span>
+            <span class="title">You approve it. Then it’s shared.</span>
+            <span>If you leave your email, we send you the edited version to approve first. Then it joins the library.</span>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="section who" aria-labelledby="who-h" style="padding-top: 0;">
+      <div class="wrap narrow who-card">
+        <h2 class="h2" id="who-h">Who reads your story</h2>
+        <p class="lead">We’re a wife and husband, married for 22 years and raising five children: two daughters and three sons, ages 5 to 17.</p>
+        <p>She has a degree in psychology and family studies. He works for a nonprofit that serves women and children affected by domestic and sexual violence in six countries around the world.</p>
+        <p>Between raising our girls and seeing this work up close, we know how much it matters for a woman to be believed. So we read every story ourselves, slowly and with care, as if it came from someone we love.</p>
       </div>
     </section>
 
@@ -87,16 +104,28 @@
       <div class="wrap narrow" style="gap: 32px;">
         <div class="stack-12" style="padding-top: 24px; border-top: 1px solid var(--gray-light);">
           <h2 class="h2" id="share-h" style="padding-top: 24px;">Share your story</h2>
-          <p>Please don’t include full names or identifying details of yourself or others.</p>
+          <p>Please don’t include full names or identifying details of yourself or others. Take breaks if you need to. There’s no wrong way to tell it.</p>
         </div>
 
         <div class="thanks" id="thanks" role="status" tabindex="-1" hidden>
           <p class="big">Thank you. You were brave today.</p>
           <p id="thanks-detail"></p>
+          <p class="caption">If you’re on a shared device, you may want to <a href="help.html#online-safety">clear your browsing history</a>.</p>
           <a href="stories.html">Read other women’s stories</a>
         </div>
 
         <form class="form" id="story-form" novalidate>
+          <div class="prompts">
+            <p style="font-weight: 600;">Not sure where to start?</p>
+            <p class="caption">You could answer one of these. A few sentences is enough.</p>
+            <ul>
+              <li>What happened, in whatever words feel right?</li>
+              <li>What do you wish someone had said to you?</li>
+              <li>Who believed you, or who didn’t?</li>
+              <li>What has helped you, even a little?</li>
+            </ul>
+          </div>
+
           <label class="field">
             <span class="label">Your story</span>
             <textarea class="textarea" name="story" rows="12" placeholder="Start wherever feels right."></textarea>
@@ -109,7 +138,7 @@
               <span class="caption" id="file-label" style="overflow-wrap: anywhere;">No file chosen</span>
               <input type="file" name="attachment" accept=".txt,.doc,.docx,.pdf">
             </label>
-            <span class="caption">.txt, .doc, or .pdf</span>
+            <span class="caption">.txt, .doc, or .pdf. For the most privacy, paste your story instead. Word and PDF files can hold hidden details, like the name saved on your computer.</span>
           </div>
 
           <label class="field">
@@ -131,7 +160,7 @@
 
           <label class="field">
             <span class="label">Email <span class="opt">(optional)</span></span>
-            <span class="caption">Only if you’d like us to follow up. Never shared or published.</span>
+            <span class="caption">Only if you’d like to approve your story before it’s shared, or hear back from us. Never shared or published. Use an email only you can open.</span>
             <input class="input" type="email" name="email" autocomplete="email">
           </label>
 
@@ -146,10 +175,15 @@
               <label class="choice">
                 <input type="radio" name="sharing" value="private">
                 <span><strong>No, keep it private.</strong>
-                  <span class="caption">Only our team will read it. It will never be published.</span></span>
+                  <span class="caption">Only the two of us will read it. It will never be published.</span></span>
               </label>
             </div>
           </fieldset>
+
+          <label class="approve" id="approve-row" hidden>
+            <input type="checkbox" name="approve" value="yes" checked>
+            <span>Email me the edited version to approve before it’s published. <span class="caption" id="approve-hint">Add your email above to use this.</span></span>
+          </label>
 
           <!-- spam trap: real people never see or fill this -->
           <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
@@ -168,11 +202,11 @@
         <ul class="promise">
           <li>
             <span class="t">Your story is anonymous.</span>
-            <span>We don’t ask for your name, and we don’t record where you are writing from.</span>
+            <span>We don’t ask for your name, and we never try to find out who you are or where you wrote from. Your story reaches us by email through a form service.</span>
           </li>
           <li>
             <span class="t">You decide if it’s shared.</span>
-            <span>Your story is only added to the library if you say yes. You can ask us to take it down at any time by emailing <a href="mailto:iamjanedoestories@gmail.com">iamjanedoestories@gmail.com</a>.</span>
+            <span>Your story is only added to the library if you say yes. If you leave your email, you approve the final version first. You can ask us to take it down at any time by emailing <a href="mailto:iamjanedoestories@gmail.com">iamjanedoestories@gmail.com</a>.</span>
           </li>
           <li>
             <span class="t">Your email stays private.</span>
@@ -180,7 +214,7 @@
           </li>
           <li>
             <span class="t">Every story is reviewed first.</span>
-            <span>A person reads each story before anything is shared, and removes details that could identify you or anyone else.</span>
+            <span>We read each story before anything is shared, and remove details that could identify you or anyone else.</span>
           </li>
         </ul>
       </div>
@@ -192,15 +226,18 @@
       <div class="stack-12">
         <p style="font-size: 21px; font-weight: 600; line-height: 1.19; letter-spacing: -0.28px;">If you’re in danger or need to talk to someone now</p>
         <div class="helplines">
-          <span>RAINN National Sexual Assault Hotline: <a href="tel:18006564673">800-656-4673</a> · <a href="https://www.rainn.org" target="_blank" rel="noopener">rainn.org</a></span>
-          <span>National Domestic Violence Hotline: <a href="tel:18007997233">800-799-7233</a> · <a href="https://www.thehotline.org" target="_blank" rel="noopener">thehotline.org</a></span>
           <span>Emergency: <a href="tel:911">911</a></span>
+          <span>RAINN Sexual Assault Hotline: <a href="tel:18006564673">800-656-4673</a> · <a href="https://rainn.org/help-and-healing/hotline/" target="_blank" rel="noopener">chat online</a></span>
+          <span>Domestic Violence Hotline: <a href="tel:18007997233">800-799-7233</a> · text START to <a href="sms:88788">88788</a></span>
+          <span>Crisis Text Line: text HOME to <a href="sms:741741">741741</a></span>
+          <span><a href="help.html">More ways to get help →</a></span>
         </div>
       </div>
       <div class="foot-row">
         <span style="font-weight: 600;">iamjanedoestories.org</span>
         <div class="links">
           <a href="stories.html">Story library</a>
+          <a href="help.html">Get help</a>
           <a href="mailto:iamjanedoestories@gmail.com">iamjanedoestories@gmail.com</a>
           <a href="#privacy">Privacy</a>
         </div>
