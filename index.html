@@ -10,6 +10,12 @@
   <script src="assets/exit.js" defer></script>
   <script src="assets/stories.js" defer></script>
   <script src="assets/form.js" defer></script>
+  <script>
+    // Visit counting (GoatCounter): no cookies, nothing that identifies a visitor.
+    // Count only the page name, never search words or other details in the address.
+    window.goatcounter = { path: function () { return location.pathname; } };
+  </script>
+  <script data-goatcounter="https://iamjanedoe.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -211,6 +217,10 @@
           <li>
             <span class="t">Your email stays private.</span>
             <span>If you leave one, we use it only to follow up with you. It is never published, shared, or sold.</span>
+          </li>
+          <li>
+            <span class="t">We count visits, not visitors.</span>
+            <span>To know how many people the site reaches, we use a privacy-friendly counter that stores nothing on your device and never identifies you or tracks you across other sites.</span>
           </li>
           <li>
             <span class="t">Every story is reviewed first.</span>
